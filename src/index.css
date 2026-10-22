@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { font-family: 'Manrope', sans-serif; color: #171916; background: #f3f1eb; font-synthesis: none; text-rendering: optimizeLegibility; }
+* { box-sizing: border-box; }
+html { scroll-behavior: auto; }
+body { margin: 0; min-width: 320px; }
+a { color: inherit; text-decoration: none; }
+button, a { -webkit-tap-highlight-color: transparent; }
+.motion-stage { min-height: 100vh; height: 100svh; overflow: hidden; position: relative; background: #f3f1eb; isolation: isolate; }
+.site-header { height: 88px; padding: 0 5.2vw; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(23,25,22,.12); position: relative; z-index: 5; }
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand-mark { width: 32px; height: 32px; display: grid; place-items: center; background: #c9f36c; border-radius: 50%; font-size: 20px; font-weight: 800; letter-spacing: -2px; }
+.brand-mark span { color: #f56b28; }
+.brand-name { font-weight: 800; font-size: 17px; letter-spacing: -.8px; }
+.brand-name span { font: 10px 'DM Mono', monospace; vertical-align: top; margin-left: 2px; }
+.header-note, .header-link, .eyebrow, .hero-side-note, .scroll-cue, .road-caption, .road-label span, .stage-footer, .metric-index, .metric-label, .metric-detail, .story-index, .story-kicker, .story-side p, .site-footer { font-family: 'DM Mono', monospace; }
+.header-note { display: flex; align-items: center; gap: 9px; font-size: 9px; letter-spacing: .13em; color: #62645d; }
+.status-light { width: 6px; height: 6px; background: #79b62b; border-radius: 50%; box-shadow: 0 0 0 4px rgba(121,182,43,.12); }
+.header-link { display: flex; align-items: center; gap: 8px; font-size: 10px; letter-spacing: .02em; border-bottom: 1px solid #b8b8af; padding: 0 0 6px; }
+.hero-content { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(350px,.8fr); gap: 5vw; padding: 7.5vh 8.5vw 0 10.3vw; position: relative; z-index: 2; }
+.hero-copy { min-width: 0; }
+.eyebrow { display: flex; align-items: center; gap: 11px; color: #696b62; font-size: 9px; letter-spacing: .11em; margin: 0 0 30px; }
+.eyebrow-rule { width: 26px; height: 1px; background: #f56b28; display: inline-block; }
+.eyebrow-number { margin-left: 8px; color: #9a9b91; }
+.hero-title { margin: 0; font-size: clamp(70px, 10.1vw, 164px); line-height: .83; letter-spacing: -.105em; font-weight: 800; white-space: nowrap; }
+.title-mask { display: block; overflow: hidden; padding: 0 .08em .12em 0; }
+.title-line { display: block; }
+.title-second { color: #f56b28; }
+.title-period { color: #c9f36c; }
+.hero-bottomline { display: flex; justify-content: space-between; align-items: end; max-width: 540px; margin-top: 35px; }
+.hero-bottomline p { margin: 0; color: #62645d; font-size: 14px; line-height: 1.65; letter-spacing: -.025em; }
+.hero-side-note { font-size: 8px; line-height: 1.7; letter-spacing: .12em; text-align: right; color: #8b8d83; }
+.metrics-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; align-content: center; padding-top: 8px; max-width: 440px; margin-left: auto; width: 100%; }
+.metric-card { min-height: 150px; border-radius: 4px; padding: 16px 17px 15px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; }
+.metric-lime { background: #c9f36c; color: #1a2111; }
+.metric-ink { background: #252824; color: #f3f1eb; }
+.metric-blue { background: #a9d8e7; color: #1d2a2d; }
+.metric-orange { background: #f56b28; color: #25190f; }
+.metric-topline { display: flex; justify-content: space-between; align-items: center; }
+.metric-index { font-size: 9px; opacity: .68; }
+.metric-dot { width: 6px; height: 6px; border: 1px solid currentColor; border-radius: 50%; opacity: .6; }
+.metric-value { font-size: clamp(35px,4.2vw,57px); line-height: .95; font-weight: 700; letter-spacing: -.08em; margin: 9px 0 6px; }
+.metric-label { font-size: 8px; letter-spacing: .1em; margin: 0 0 5px; font-weight: 500; }
+.metric-detail { font-size: 8px; margin: 0; opacity: .67; letter-spacing: -.015em; }
+.scroll-cue { position: absolute; z-index: 5; bottom: 24.5%; left: 5.2vw; display: flex; align-items: center; gap: 10px; color: #7a7b72; font-size: 8px; letter-spacing: .12em; }
+.scroll-cue-icon { width: 27px; height: 27px; border: 1px solid #c5c5bb; border-radius: 50%; display: grid; place-items: center; color: #f56b28; }
+.scroll-cue-line { display: block; width: 46px; height: 1px; background: #c5c5bb; margin-left: 4px; }
+.road-scene { position: absolute; z-index: 3; left: 0; right: 0; bottom: 8.5%; height: 24%; min-height: 150px; }
+.road-caption { position: absolute; z-index: 2; top: -24px; font-size: 8px; letter-spacing: .12em; color: #8a8c82; }
+.road-caption-left { left: 5.2vw; }
+.road-caption-right { right: 5.2vw; }
+.road-surface { position: absolute; left: 0; right: 0; top: 28%; height: 72%; background: #222522; overflow: hidden; }
+.road-centre-line { position: absolute; left: 0; right: 0; top: 50%; border-top: 1px dashed rgba(243,241,235,.24); }
+.road-glow { position: absolute; left: 0; top: 0; height: 100%; width: 48%; background: linear-gradient(90deg,rgba(201,243,108,.2),rgba(201,243,108,.04),transparent); transform: scaleX(0); transform-origin: left center; }
+.car-wrap { position: absolute; z-index: 4; width: min(46vw,610px); min-width: 350px; top: 0; left: -36vw; transform: translateX(0); will-change: transform; }
+.car-art { display: block; width: 100%; overflow: visible; }
+.road-label { position: absolute; z-index: 2; top: 36%; left: 9%; color: #f3f1eb; font-size: clamp(25px,3vw,44px); font-weight: 800; letter-spacing: -.07em; line-height: .85; opacity: 0; transform: translateY(10px); pointer-events: none; }
+.road-label em { font-style: normal; color: #c9f36c; }
+.road-label span { display: block; font-size: 8px; font-weight: 400; letter-spacing: .1em; color: #aaaDA3; margin-top: 17px; }
+.stage-footer { position: absolute; bottom: 2.7%; left: 5.2vw; right: 5.2vw; display: flex; justify-content: space-between; font-size: 8px; letter-spacing: .1em; color: #8a8c82; }
+.scroll-progress { position: absolute; z-index: 8; height: 3px; left: 0; right: 0; bottom: 0; background: rgba(23,25,22,.08); }
+.scroll-progress span { display: block; width: 100%; height: 100%; background: #f56b28; transform: scaleX(0); transform-origin: left center; }
+.story-section { min-height: 82vh; background: #c9f36c; padding: 8vh 10.3vw 10vh; display: grid; grid-template-columns: 1fr 2.3fr .8fr; gap: 5vw; position: relative; overflow: hidden; }
+.story-index { display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; font-size: 9px; letter-spacing: .1em; color: #52672d; min-height: 250px; }
+.story-copy { padding-top: 4vh; }
+.story-kicker { font-size: 9px; letter-spacing: .13em; color: #53652e; margin: 0 0 26px; }
+.story-copy h2 { font-size: clamp(34px,5vw,72px); line-height: 1.06; letter-spacing: -.075em; margin: 0; font-weight: 700; }
+.story-copy h2 span { color: #5d6f38; }
+.story-description { max-width: 500px; color: #46522f; font-size: 14px; line-height: 1.85; margin: 28px 0 26px; }
+.story-link { display: inline-flex; align-items: center; gap: 10px; padding-bottom: 8px; border-bottom: 1px solid rgba(23,25,22,.45); font-size: 12px; font-weight: 700; }
+.story-side { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 26px; }
+.side-orbit { width: 145px; height: 145px; border: 1px solid rgba(23,25,22,.35); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-direction: column; font-size: 10px; letter-spacing: .14em; line-height: 1.8; transform: rotate(-13deg); }
+.side-orbit span:last-child { color: #f56b28; }
+.story-side p { font-size: 8px; line-height: 1.7; letter-spacing: .12em; text-align: center; color: #52672d; }
+.site-footer { min-height: 90px; display: flex; justify-content: space-between; align-items: center; padding: 0 5.2vw; background: #222522; color: #b8bbb0; font-size: 8px; letter-spacing: .11em; }
+.footer-brand { font-family: 'Manrope',sans-serif; color: #f3f1eb; font-size: 20px; font-weight: 800; letter-spacing: -.08em; }
+.footer-brand span { color: #f56b28; }
+
+@media (min-width: 1500px) { .hero-content { padding-top: 8.5vh; } .metric-card { min-height: 166px; padding: 18px 20px; } }
+@media (max-width: 1050px) { .hero-content { grid-template-columns: 1fr; padding: 6vh 8vw 0; gap: 3vh; } .hero-title { font-size: clamp(74px,12.5vw,130px); } .metrics-grid { margin: 0; max-width: 520px; gap: 9px; } .metric-card { min-height: 105px; padding: 11px 13px; } .metric-value { font-size: 34px; margin: 4px 0; } .metric-detail { display: none; } .road-scene { bottom: 7%; height: 20%; } .scroll-cue { bottom: 22%; } .story-section { grid-template-columns: .6fr 2fr; } .story-side { display: none; } }
+@media (max-width: 650px) { .site-header { height: 68px; padding: 0 6vw; } .header-note { display: none; } .header-link { font-size: 9px; } .hero-content { padding: 6vh 6vw 0; gap: 3.5vh; } .eyebrow { font-size: 7px; letter-spacing: .06em; gap: 7px; margin-bottom: 23px; } .eyebrow-rule { width: 16px; } .hero-title { font-size: clamp(58px,13.5vw,88px); letter-spacing: -.1em; } .hero-bottomline { margin-top: 18px; } .hero-bottomline p { font-size: 11px; } .hero-side-note { font-size: 7px; } .metrics-grid { width: 100%; gap: 7px; } .metric-card { min-height: 90px; padding: 9px 10px; } .metric-value { font-size: 30px; } .metric-label { font-size: 7px; } .metric-index { font-size: 7px; } .scroll-cue { left: 6vw; bottom: 20%; font-size: 7px; gap: 7px; } .scroll-cue-line { width: 20px; } .road-scene { bottom: 8.5%; height: 19%; min-height: 125px; } .road-caption { font-size: 6px; top: -18px; } .road-caption-left { left: 6vw; } .road-caption-right { right: 6vw; } .car-wrap { width: 420px; min-width: 420px; left: -330px; top: 0; } .road-label { left: 6%; font-size: 28px; top: 36%; } .road-label span { font-size: 6px; } .stage-footer { left: 6vw; right: 6vw; bottom: 2.4%; font-size: 6px; letter-spacing: .04em; } .stage-footer span:nth-child(2) { display: none; } .story-section { min-height: auto; padding: 7vh 7vw 9vh; display: block; } .story-index { min-height: auto; flex-direction: row; margin-bottom: 7vh; } .story-copy { padding-top: 0; } .story-copy h2 { font-size: clamp(34px,9vw,52px); } .story-description { font-size: 12px; margin-top: 20px; } .site-footer { padding: 0 6vw; min-height: 78px; } .site-footer span:nth-child(2) { display: none; } .site-footer span:last-child { font-size: 7px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
